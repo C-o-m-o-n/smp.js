@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Music Player Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="music-player">
+        <audio id="audio-player" controls>
+            <source src="stranger-things.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <button id="play-pause-btn">Play</button>
+        <input type="range" id="volume-control" min="0" max="1" step="0.1" value="1">
+    </div>
+	<script type="module" >
+       
+       import {SimpleMusicPlayer} from './smp.js';
+const player = new SimpleMusicPlayer('audio-player', 'play-pause-btn', 'volume-control');
+
+    </script>
+</body>
+</html>
+
